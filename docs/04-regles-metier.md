@@ -8,9 +8,9 @@ Règles **non négociables**. Chacune est testable (`07-tests.md`). Les modifier
 |---|---|
 | **R1** | **Aucune écriture dans une source** (Smart School, Planning, Planning Évaluations, source externe des devoirs). Double protection : utilisateur MySQL en lecture seule quand l'hébergement le permet, et **toujours** `SET SESSION TRANSACTION READ ONLY` sur les connexions `smartschool` et `planning`. Un test prouve qu'une écriture échoue. |
 | **R10** | Un élève **inactif** dans Smart School ou sorti du périmètre **disparaît** du compte à la synchronisation suivante. Une famille sans aucun enfant actif est **suspendue** automatiquement. Rien n'est supprimé : l'historique reste. |
-| **R11** | L'**emploi du temps** est celui de la classe dans Planning. Il n'est **jamais saisi** dans ParentsApp. La date de la dernière synchronisation est affichée. |
+| **R11** | L'**emploi du temps** est celui de la classe dans Planning. Il n'est **jamais saisi** dans Ecoleparent. La date de la dernière synchronisation est affichée. |
 | **R12** | Les **contrôles** affichés sont **uniquement ceux de la version publiée** de Planning Évaluations, avec le n° et la date de cette version. Jamais de brouillon. |
-| **R13** | Les **paiements** suivent le **même calcul** que le portail des rapports et Ecolepay : un mois enregistré comme payé dans Smart School est **réglé**, remise comprise. **Aucun montant n'est stocké** dans ParentsApp : lecture au moment de l'affichage (cache de 5 minutes au plus). |
+| **R13** | Les **paiements** suivent le **même calcul** que le portail des rapports et Ecolepay : un mois enregistré comme payé dans Smart School est **réglé**, remise comprise. **Aucun montant n'est stocké** dans Ecoleparent : lecture au moment de l'affichage (cache de 5 minutes au plus). |
 | **R18** | Les **devoirs** viennent de la source décidée (ADR 0007). Ils sont **par classe**, jamais personnels à un élève. Chacun a une date donnée et une date à rendre. |
 | **R24** | **Minimisation** : la copie locale d'un élève se limite à son identité (prénom, nom, classe, statut). Pas de date de naissance, d'adresse, de numéro d'identité, de note ni d'absence. |
 

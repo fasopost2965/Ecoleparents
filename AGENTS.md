@@ -4,20 +4,20 @@
 
 ## 1. Ce qu'est ce projet
 
-**ParentsApp** est l'**Espace Parent** de l'école La Victoire (Tétouan). Une application web installable sur le téléphone (PWA) où chaque famille, connectée avec un **code remis par l'école**, retrouve pour chacun de ses enfants :
+**Ecoleparent** est l'**Espace Parent** de l'école La Victoire (Tétouan). Une application web installable sur le téléphone (PWA) où chaque famille, connectée avec un **code remis par l'école**, retrouve pour chacun de ses enfants :
 
 - l'**emploi du temps** de sa classe (lu dans l'application Planning) ;
 - le **calendrier des contrôles publié** (lu dans Planning Évaluations) ;
 - les **devoirs à la maison** (source à décider, ADR 0007) ;
 - l'**état des paiements** de scolarité et de transport (lu dans Smart School) ;
-- les **annonces** de l'école (écrites dans ParentsApp par la direction).
+- les **annonces** de l'école (écrites dans Ecoleparent par la direction).
 
 Un petit espace d'administration (Filament) sert à la Direction et au Secrétariat : comptes des familles, codes, annonces, correspondances entre applications.
 
 **Ce qui compte le plus :**
 
 1. **Une famille ne voit jamais les données d'un autre enfant** (R2, R3). C'est la règle la plus grave du projet : elle est testée à chaque écran.
-2. **Les sources ne sont jamais modifiées** (R1). ParentsApp rassemble, il ne ressaisit rien.
+2. **Les sources ne sont jamais modifiées** (R1). Ecoleparent rassemble, il ne ressaisit rien.
 3. **Le ton envers les familles** : respectueux, dans les valeurs islamiques et la culture du Nord du Maroc. Sur les paiements, on **informe**, on ne réclame jamais (R14).
 
 C'est un module de la future application de gestion scolaire, construit sur le même socle qu'Ecolepay et Planning Évaluations.

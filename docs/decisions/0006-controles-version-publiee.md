@@ -11,7 +11,7 @@ Planning Évaluations publie des versions figées du calendrier des contrôles ;
 
 ## Décision
 
-- ParentsApp démarre avec **P1**. Le jeton de chaque classe est saisi dans l'écran A5 et **stocké chiffré**.
+- Ecoleparent démarre avec **P1**. Le jeton de chaque classe est saisi dans l'écran A5 et **stocké chiffré**.
 - Lecture toutes les 15 minutes au plus ; en cas d'échec, la dernière version reste affichée avec sa date (R20).
 - Passage à **P2** seulement si P1 ne suffit pas (par exemple pour le calendrier officiel des jours fériés, aujourd'hui importé en CSV).
 

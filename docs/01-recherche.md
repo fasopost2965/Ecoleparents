@@ -80,7 +80,7 @@ Vérifié en SSH le 26/09/2026 pendant le cadrage de Planning Évaluations (`pla
 - Même compte Hostinger ; base MySQL **locale** ; lue en lecture seule (`SET SESSION TRANSACTION READ ONLY`, un seul utilisateur MySQL possible en mutualisé).
 - Tables lues : `classes`, `subjects`, `teachers`, `requirements` (affectations), `assignments` (séances par jour, créneau `p1`…`p6`, demi-créneau), `schedule_presets` (grille horaire du cycle `college`).
 - Identifiants des classes du collège : `COLG1` (1AC-G1), `COLG2` (1AC-G2), `COL2EG1` (2AC).
-- Le code d'accès est déjà écrit : `App\Domain\Timetable\PlanningDatabaseSource` dans Planning Évaluations. **ParentsApp le reprend tel quel** (même interface `TimetableSource`).
+- Le code d'accès est déjà écrit : `App\Domain\Timetable\PlanningDatabaseSource` dans Planning Évaluations. **Ecoleparent le reprend tel quel** (même interface `TimetableSource`).
 
 **Point à trancher 🔍 :** faut-il afficher le **nom du professeur** dans l'emploi du temps des parents ? Proposition : oui, le nom seul (jamais le téléphone). À valider (R3).
 
@@ -90,7 +90,7 @@ Vérifié en SSH le 26/09/2026 pendant le cadrage de Planning Évaluations (`pla
 
 - En production : `https://evaluations.groupelavictoire.com`.
 - Seule la **version publiée** sort du module (sa règle R17).
-- Chaque classe a un **lien de partage à jeton**, avec un flux d'agenda iCal `/p/{jeton}.ics` (UID stable par contrôle, `SEQUENCE` = n° de version). C'est le **contrat P1** de son backlog : ParentsApp peut l'utiliser **sans aucun changement** dans Planning Évaluations.
+- Chaque classe a un **lien de partage à jeton**, avec un flux d'agenda iCal `/p/{jeton}.ics` (UID stable par contrôle, `SEQUENCE` = n° de version). C'est le **contrat P1** de son backlog : Ecoleparent peut l'utiliser **sans aucun changement** dans Planning Évaluations.
 - Un point de lecture JSON par classe (**contrat P2**) est prévu dans son backlog, s'il devient nécessaire ; il demande l'accord d'Amadou et un ADR **côté Planning Évaluations**.
 
 **Décision :** ADR [`0006`](decisions/0006-controles-version-publiee.md).
@@ -107,7 +107,7 @@ L'école a une licence de l'application mobile Smart School, **non déployée**.
 | Langues (arabe RTL ?) | Parents majoritairement arabophones |
 | Si elle affiche l'emploi du temps et les contrôles | Non : ces données sont dans Planning et Planning Évaluations, pas dans Smart School |
 
-Conclusion provisoire : elle ne peut pas **rassembler** les sources de l'école (Planning, Planning Évaluations). C'est la raison d'être de ParentsApp (ADR 0001).
+Conclusion provisoire : elle ne peut pas **rassembler** les sources de l'école (Planning, Planning Évaluations). C'est la raison d'être de Ecoleparent (ADR 0001).
 
 ---
 
@@ -116,8 +116,8 @@ Conclusion provisoire : elle ne peut pas **rassembler** les sources de l'école 
 | Option | Pour | Contre |
 |---|---|---|
 | **Cahier Journal** (`cahier-journal-la-victoire`, déployé sur `journal.groupelavictoire.com`, React + Express + Prisma) | Les profs notent déjà la séance ; les devoirs y auraient leur place naturelle | **Pas encore utilisé par les profs** ; 🔍 existe-t-il un champ « devoirs » ? Quel accès en lecture (base, API) ? |
-| **Saisie par le Secrétariat** dans ParentsApp | Aucune dépendance, disponible tout de suite | Charge de travail pour le Secrétariat ; dépend des profs qui transmettent |
-| **Comptes professeurs** dans ParentsApp | À la source | Nouveaux comptes, nouveau modèle de sécurité, formation |
+| **Saisie par le Secrétariat** dans Ecoleparent | Aucune dépendance, disponible tout de suite | Charge de travail pour le Secrétariat ; dépend des profs qui transmettent |
+| **Comptes professeurs** dans Ecoleparent | À la source | Nouveaux comptes, nouveau modèle de sécurité, formation |
 
 **Proposition :** ADR [`0007`](decisions/0007-source-des-devoirs.md) 🟡 — interface `HomeworkSource`, saisie Secrétariat pour le MVP, bascule vers le Cahier Journal quand les profs l'utiliseront.
 
@@ -135,7 +135,7 @@ Conclusion provisoire : elle ne peut pas **rassembler** les sources de l'école 
 
 ## 8. Données personnelles 🔍
 
-- ParentsApp **ouvre à des parents**, via Internet, des données sur des **mineurs** (nom, classe) et sur la **situation de paiement** des familles. C'est plus sensible qu'un outil interne.
+- Ecoleparent **ouvre à des parents**, via Internet, des données sur des **mineurs** (nom, classe) et sur la **situation de paiement** des familles. C'est plus sensible qu'un outil interne.
 - **Loi 09-08** et **CNDP** au Maroc : 🔍 vérifier si l'école doit déclarer ce traitement ou compléter sa déclaration **avant l'ouverture aux parents**. Bloquant pour la mise en production (R25).
 - Minimisation : identité uniquement (R24), pas de copie des montants (R13), paiements hors du cache du téléphone (R21), journal des connexions conservé 12 mois (R22).
 - Mention d'information à prévoir sur la fiche d'accès et dans l'application (qui traite, quelles données, à qui s'adresser) — texte à valider.

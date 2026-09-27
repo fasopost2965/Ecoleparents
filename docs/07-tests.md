@@ -37,7 +37,7 @@
 
 Sur une **copie de la base Smart School** (ou en lecture sur la base réelle, R1) :
 
-- pour **chaque élève actif du collège**, la liste des mois réglés / à régler (scolarité et transport) donnée par ParentsApp est **identique** à celle du portail `livre-des-comptes-la-victoire` et à celle d'Ecolepay, à la même date ;
+- pour **chaque élève actif du collège**, la liste des mois réglés / à régler (scolarité et transport) donnée par Ecoleparent est **identique** à celle du portail `livre-des-comptes-la-victoire` et à celle d'Ecolepay, à la même date ;
 - le total « reste à régler » est identique ;
 - un élève avec remise (mois enregistré à 225 ou 200 DH au lieu de 250 DH) apparaît **réglé** pour ce mois.
 
@@ -58,7 +58,7 @@ Revue dédiée, **par une deuxième IA ou une deuxième personne**, de toutes le
 | 3 | Même chose sur un iPhone (Safari) | Idem, en suivant les instructions de la fiche |
 | 4 | Famille à deux enfants | Sélecteur d'enfant ; chaque écran change avec l'enfant |
 | 5 | Mode avion | Dernières informations datées ; Paiements invite à se reconnecter |
-| 6 | Changer une date publiée dans Planning Évaluations | Visible dans ParentsApp en moins de 15 min |
+| 6 | Changer une date publiée dans Planning Évaluations | Visible dans Ecoleparent en moins de 15 min |
 | 7 | Régénérer le code d'une famille | Son téléphone est déconnecté |
 | 8 | Publier une annonce pour 1AC-G1 | Visible par une famille de 1AC-G1, pas par une famille de 2AC |
 | 9 | Lire P6 en arabe, français, anglais | Aucun mot interdit, ton validé |

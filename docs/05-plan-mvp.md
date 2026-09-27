@@ -4,7 +4,7 @@ Chaque phase se termine par : tests verts, résumé, commit, mise à jour de `co
 
 **Objectif de calendrier (proposé 🔍) :** ouverture aux familles du collège au **début du 2ᵉ semestre, lundi 1er février 2027** (semaine 18), juste après la publication du calendrier des contrôles du S2 dans Planning Évaluations.
 
-**Contrainte connue :** la v1.1 de Planning Évaluations est prévue pendant les vacances du 6 au 13 décembre 2026, pour la réunion de janvier. Ne pas planifier de phase lourde de ParentsApp sur cette semaine.
+**Contrainte connue :** la v1.1 de Planning Évaluations est prévue pendant les vacances du 6 au 13 décembre 2026, pour la réunion de janvier. Ne pas planifier de phase lourde de Ecoleparent sur cette semaine.
 
 | Période (proposée) | Phases |
 |---|---|
@@ -95,7 +95,7 @@ Chaque phase se termine par : tests verts, résumé, commit, mise à jour de `co
 - Écran P4, bouton « Ajouter à l'agenda ».
 
 **Règles testées :** R2, R12, R20.
-**Sortie :** après une nouvelle publication dans Planning Évaluations, le changement apparaît dans ParentsApp au plus tard 15 minutes après, avec le nouveau n° de version ; un brouillon n'apparaît jamais.
+**Sortie :** après une nouvelle publication dans Planning Évaluations, le changement apparaît dans Ecoleparent au plus tard 15 minutes après, avec le nouveau n° de version ; un brouillon n'apparaît jamais.
 
 ---
 

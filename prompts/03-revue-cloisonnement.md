@@ -4,7 +4,7 @@
 
 ---
 
-Tu relis le dépôt `ParentsApp` avec un seul objectif : **une famille connectée peut-elle, d'une façon ou d'une autre, voir une donnée d'un enfant qui n'est pas le sien ?**
+Tu relis le dépôt `ecoleparent` avec un seul objectif : **une famille connectée peut-elle, d'une façon ou d'une autre, voir une donnée d'un enfant qui n'est pas le sien ?**
 
 Lis `AGENTS.md`, `docs/04-regles-metier.md` (R2, R3, R21) et `docs/03-architecture.md` § 3 et § 8. Puis :
 

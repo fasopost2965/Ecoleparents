@@ -15,7 +15,7 @@
 | Règles métier | 🟡 R1 à R26, à valider |
 | Plan du MVP | 🟡 Phases 0 à 10, calendrier proposé jusqu'au 1er février 2027 |
 | Design | 🟡 Système repris ; maquettes Stitch à faire (arabe d'abord) |
-| Nom du projet, dépôt, sous-domaine | 🟡 Dépôt créé le 27/09/2026 : `fasopost2965/ParentsApp`. **« ParentsApp » est un nom provisoire** (nom définitif à choisir par Amadou). Sous-domaine à choisir (`{{SOUS_DOMAINE}}` dans la doc) |
+| Nom du projet, dépôt, sous-domaine | ✅ **Nom définitif : Ecoleparent** (validé le 27/09/2026, même famille qu'Ecolepay et Ecoledoc). Sur le téléphone des parents, l'application s'appelle **« La Victoire »** (nom et logo de l'école). Dépôt créé sous le nom provisoire `ParentsApp`, **à renommer `ecoleparent` sur GitHub**. Sous-domaine à choisir (`{{SOUS_DOMAINE}}` dans la doc) |
 | Développement | Pas commencé |
 
 ## Décisions prises
@@ -27,6 +27,7 @@
 5. **Sources en lecture seule** derrière des connecteurs ; connecteur Smart School unique repris d'Ecolepay (ADR 0002)
 6. **Contrôles** : version publiée de Planning Évaluations via son flux iCal par classe (contrat P1), sans changement dans Planning Évaluations (ADR 0006)
 7. **Trois langues**, arabe par défaut (ADR 0008)
+8. **Nom** : produit **Ecoleparent** ; nom affiché aux familles (icône, titre de l'application) : **« La Victoire »** (27/09/2026)
 
 ## Décisions proposées, à valider
 
@@ -52,14 +53,14 @@
 
 ## Liens avec les autres projets
 
-- **Planning Évaluations** : ParentsApp lit son flux publié (contrat P1). Son backlog note que l'Espace Parent est **hors de sa v2** et ne le relance pas. Si le contrat P2 (JSON) devient nécessaire, la demande se fait **dans Planning Évaluations**, avec un ADR là-bas.
+- **Planning Évaluations** : Ecoleparent lit son flux publié (contrat P1). Son backlog note que l'Espace Parent est **hors de sa v2** et ne le relance pas. Si le contrat P2 (JSON) devient nécessaire, la demande se fait **dans Planning Évaluations**, avec un ADR là-bas.
 - **Ecolepay** : même connecteur Smart School, même calcul des paiements. Les rappels de paiement restent chez Ecolepay.
 - **Cahier Journal** : source possible des devoirs (ADR 0007).
 
 ## Prochaine action
 
 1. **Amadou relit** la documentation, tranche les ADR 🟡, choisit le **nom définitif** et le sous-domaine.
-2. ✅ Dépôt `ParentsApp` créé et documentation poussée (27/09/2026). Si le nom définitif change, renommer le dépôt sur GitHub et remplacer « ParentsApp » dans la doc.
+2. ✅ Documentation poussée (27/09/2026) ; nom Ecoleparent appliqué partout. **Amadou renomme le dépôt `ParentsApp` → `ecoleparent`** sur GitHub (Settings → Rename ; l'ancienne adresse redirige).
 3. Requêtes de vérification Smart School, collées dans `01-recherche.md`.
 4. Maquettes Stitch des écrans prioritaires (P2, P1, P6, fiche d'accès, A2), en arabe d'abord.
 5. Phase 0 (installation) — pas avant la validation des points 1 à 4.

@@ -11,7 +11,7 @@ Les devoirs font partie du MVP, mais aucune application ne les contient aujourd'
 - Interface **`HomeworkSource`** : l'espace parents ne sait pas d'où viennent les devoirs.
 - **MVP : saisie par le Secrétariat** dans l'administration (écran A4, `ManualHomeworkSource`), avec duplication vers les groupes du même niveau.
 - **Plus tard : `CahierJournalHomeworkSource`**, en lecture seule, quand les profs utiliseront le Cahier Journal (pilote avec un prof volontaire déjà décidé) — si ce dernier a un champ « devoirs » (🔍).
-- Comptes professeurs dans ParentsApp : **non** (backlog), pour ne pas créer un deuxième outil de saisie pour les profs.
+- Comptes professeurs dans Ecoleparent : **non** (backlog), pour ne pas créer un deuxième outil de saisie pour les profs.
 
 ## À trancher par Amadou avant la phase 8
 
