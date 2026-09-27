@@ -37,13 +37,13 @@ Même procédure que Planning Évaluations (`planning-evaluations/docs/08-deploi
 
 1. Créer le sous-domaine, activer HTTPS.
 2. Créer la base et son utilisateur (mot de passe uniquement dans `.env`).
-3. Code dans `~/domains/groupelavictoire.com/apps/ecoleparent` (hors `public_html`) ; racine web = lien symbolique vers `public/`.
+3. Code dans `~/domains/groupelavictoire.com/apps/ecoleparents` (hors `public_html`) ; racine web = lien symbolique vers `public/`.
 4. Clé de déploiement GitHub **en lecture seule**.
 5. `composer install --no-dev --optimize-autoloader`.
 6. `npm run build` **en local** (pas de Node.js sur le serveur), puis envoi de `public/build/`.
 7. `.env` : `APP_ENV=production`, `APP_DEBUG=false`, `APP_LOCALE=fr` (administration), `APP_TIMEZONE=Africa/Casablanca`, connexions `smartschool` et `planning`.
 8. `php artisan migrate --force` (base Ecoleparent uniquement), `php artisan filament:assets`, `php artisan optimize`.
-9. Tâche Cron hPanel : `/usr/bin/php …/apps/ecoleparent/artisan schedule:run` chaque minute.
+9. Tâche Cron hPanel : `/usr/bin/php …/apps/ecoleparents/artisan schedule:run` chaque minute.
 10. Première synchronisation Smart School et Planning ; correspondance des classes (A5).
 11. Comptes Direction et Secrétariat (depuis l'écran A7).
 

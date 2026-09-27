@@ -1,6 +1,6 @@
 # Amorçage d'un agent de code
 
-À copier tel quel dans Claude Code, Antigravity ou Codex, à la racine du dépôt `ecoleparent`.
+À copier tel quel dans Claude Code, Antigravity ou Codex, à la racine du dépôt `Ecoleparents`.
 
 ---
 

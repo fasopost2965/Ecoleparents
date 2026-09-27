@@ -9,12 +9,12 @@ Bonjour. Je suis Amadou, je développe moi-même les outils de gestion de l'éco
 **Le projet :** Ecoleparent, l'Espace Parent de l'école. Une application web installable sur le téléphone (PWA) où chaque famille, connectée avec un code remis par l'école, retrouve pour chacun de ses enfants l'emploi du temps, les contrôles publiés, les devoirs, l'état des paiements et les annonces, en arabe, français ou anglais. Il lit Smart School, Planning et Planning Évaluations **en lecture seule**. Pilote : le collège.
 
 **Où tout se trouve :**
-- Dépôt du projet : https://github.com/fasopost2965/ecoleparent
+- Dépôt du projet : https://github.com/fasopost2965/Ecoleparents
 - Même socle et même connecteur Smart School : https://github.com/fasopost2965/ecolepay
 - Connecteur Planning et flux des contrôles : https://github.com/fasopost2965/planning-evaluations
 - Bibliothèque d'idées et méthode : https://github.com/fasopost2965/fasopost-bibliotheque
 
-**Avant toute chose, lis dans `ecoleparent`, dans cet ordre :**
+**Avant toute chose, lis dans `Ecoleparents`, dans cet ordre :**
 1. `AGENTS.md`
 2. `docs/continuite.md`
 3. `docs/00-vision.md`, `docs/04-regles-metier.md`, `docs/02-specifications.md`, `docs/03-architecture.md`, `docs/05-plan-mvp.md`
