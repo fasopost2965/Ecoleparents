@@ -6,7 +6,7 @@
 
 Bonjour. Je suis Amadou, je développe moi-même les outils de gestion de l'école La Victoire à Tétouan.
 
-**Le projet :** Ecoleparent, l'Espace Parent de l'école. Une application web installable sur le téléphone (PWA) où chaque famille, connectée avec un code remis par l'école, retrouve pour chacun de ses enfants l'emploi du temps, les contrôles publiés, les devoirs, l'état des paiements et les annonces, en arabe, français ou anglais. Il lit Smart School, Planning et Planning Évaluations **en lecture seule**. Pilote : le collège.
+**Le projet :** Ecoleparents, l'Espace Parent de l'école. Une application web installable sur le téléphone (PWA) où chaque famille, connectée avec un code remis par l'école, retrouve pour chacun de ses enfants l'emploi du temps, les contrôles publiés, les devoirs, l'état des paiements et les annonces, en arabe, français ou anglais. Il lit Smart School, Planning et Planning Évaluations **en lecture seule**. Pilote : le collège.
 
 **Où tout se trouve :**
 - Dépôt du projet : https://github.com/fasopost2965/Ecoleparents

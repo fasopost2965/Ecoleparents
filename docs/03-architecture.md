@@ -12,7 +12,7 @@ Voir [`decisions/0001-application-separee-pwa.md`](decisions/0001-application-se
 | Administration | Filament 5 (garde `web`) |
 | Espace parents | Blade + Livewire (fournis avec Filament), garde **`parent`** séparée ; Tailwind avec les jetons du thème |
 | PWA | `manifest.webmanifest` + service worker écrits à la main (pas de paquet) |
-| Base Ecoleparent | MySQL, connexion `mysql` |
+| Base Ecoleparents | MySQL, connexion `mysql` |
 | Smart School | MySQL, connexion `smartschool`, lecture seule |
 | Planning | MySQL, connexion `planning`, lecture seule |
 | Planning Évaluations | HTTPS, flux iCal par classe (contrat P1) ; lecture du flux avec le client HTTP de Laravel et le lecteur iCal à choisir 🔍 (question à Amadou avant la phase 5) |
@@ -27,13 +27,13 @@ Voir [`decisions/0001-application-separee-pwa.md`](decisions/0001-application-se
 ## 2. Vue d'ensemble
 
 ```
-                         ┌──────────────────── Ecoleparent (Laravel) ────────────────────┐
+                         ┌──────────────────── Ecoleparents (Laravel) ────────────────────┐
  Téléphone du parent ──► │ Espace parents (PWA, garde `parent`)                         │
                          │        │                                                      │
  Direction/Secrétariat ─►│ Administration (Filament, garde `web`)                       │
                          │        │                                                      │
                          │        ▼                                                      │
-                         │  Services métier (App\Domain\…)  ──►  Base Ecoleparent          │
+                         │  Services métier (App\Domain\…)  ──►  Base Ecoleparents          │
                          │        │                              (comptes, annonces,    │
                          │        ▼                               devoirs, correspondances)│
                          │  Connecteurs (seuls points d'accès aux sources)               │
@@ -54,9 +54,9 @@ Voir [`decisions/0001-application-separee-pwa.md`](decisions/0001-application-se
 | `App\Domain\SchoolData` | **Connecteur Smart School** : familles, élèves, classes, paiements | Connexion `smartschool` uniquement |
 | `App\Domain\Timetable` | Connecteur Planning, **repris de Planning Évaluations** (même interface `TimetableSource`) + copie locale | Connexion `planning` |
 | `App\Domain\Assessments` | Lecture du flux publié de Planning Évaluations | HTTPS |
-| `App\Domain\Homework` | Interface `HomeworkSource` ; implémentation MVP selon l'ADR 0007 | Base Ecoleparent (MVP proposé) |
-| `App\Domain\Families` | Comptes, rattachements, codes, fiches d'accès, sessions d'appareils | Base Ecoleparent + `SchoolData` |
-| `App\Domain\Announcements` | Annonces, cibles, lectures | Base Ecoleparent |
+| `App\Domain\Homework` | Interface `HomeworkSource` ; implémentation MVP selon l'ADR 0007 | Base Ecoleparents (MVP proposé) |
+| `App\Domain\Families` | Comptes, rattachements, codes, fiches d'accès, sessions d'appareils | Base Ecoleparents + `SchoolData` |
+| `App\Domain\Announcements` | Annonces, cibles, lectures | Base Ecoleparents |
 | `App\Domain\ParentView` | **Seul point d'entrée de l'espace parents** : assemble les données d'un enfant **après** le contrôle de cloisonnement (R2) | Tous les modules ci-dessus |
 
 **Règle :** aucun contrôleur ni composant Livewire de l'espace parents n'appelle directement un connecteur. Tout passe par `ParentView`, qui reçoit le **compte connecté** et un **identifiant d'enfant**, et renvoie 404 si l'enfant n'est pas rattaché au compte.
@@ -97,11 +97,11 @@ interface HomeworkSource
 }
 ```
 
-**Connecteur Smart School unique :** Amadou a validé qu'une **seule porte** vers Smart School serve toutes ses applications. Tant que cette porte n'existe pas comme paquet partagé, Ecoleparent **reprend le code d'Ecolepay** (mêmes requêtes de paiement, mêmes tests de comparaison) dans `App\Domain\SchoolData`, sans l'adapter. Extraction en paquet commun : voir `backlog.md` 🔍.
+**Connecteur Smart School unique :** Amadou a validé qu'une **seule porte** vers Smart School serve toutes ses applications. Tant que cette porte n'existe pas comme paquet partagé, Ecoleparents **reprend le code d'Ecolepay** (mêmes requêtes de paiement, mêmes tests de comparaison) dans `App\Domain\SchoolData`, sans l'adapter. Extraction en paquet commun : voir `backlog.md` 🔍.
 
 ---
 
-## 4. Modèle de données (base Ecoleparent)
+## 4. Modèle de données (base Ecoleparents)
 
 **Aucun montant n'est stocké. Aucune donnée d'élève au-delà de l'identité** (R13, R24).
 

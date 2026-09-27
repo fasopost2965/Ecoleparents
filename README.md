@@ -1,4 +1,4 @@
-# Ecoleparent
+# Ecoleparents
 
 **L'Espace Parent de l'école La Victoire** (nom affiché aux familles sur leur téléphone : « La Victoire ») : une application web installable sur le téléphone (PWA), où chaque famille retrouve, pour chacun de ses enfants, l'emploi du temps, le calendrier des contrôles, les devoirs, l'état des paiements et les annonces de l'école — en arabe, en français ou en anglais.
 
@@ -33,7 +33,7 @@ Voir [`docs/decisions/0001-application-separee-pwa.md`](docs/decisions/0001-appl
 
 ## Dépôts liés
 
-| Dépôt | Ce que Ecoleparent en lit |
+| Dépôt | Ce que Ecoleparents en lit |
 |---|---|
 | `fasopost2965/e-victoire` (Smart School) | Familles, élèves, classes, paiements |
 | `fasopost2965/TimeTable` (Planning) | Emplois du temps des classes |

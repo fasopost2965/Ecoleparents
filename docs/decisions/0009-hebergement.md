@@ -4,7 +4,7 @@
 
 ## Contexte
 
-Smart School, Planning et Planning Évaluations sont sur le **même compte Hostinger Business** (mutualisé). Ecoleparent doit lire Smart School et Planning en permanence. Un VPS existe dans un autre compte.
+Smart School, Planning et Planning Évaluations sont sur le **même compte Hostinger Business** (mutualisé). Ecoleparents doit lire Smart School et Planning en permanence. Un VPS existe dans un autre compte.
 
 ## Options
 

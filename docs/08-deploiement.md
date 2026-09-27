@@ -10,8 +10,8 @@ Compte Hostinger Business (mutualisé, u707543112)
 ├── /rapports                                        → portail livre-des-comptes
 ├── planning.groupelavictoire.com                    → Planning (sa base MySQL)
 ├── evaluations.groupelavictoire.com                 → Planning Évaluations
-└── {{SOUS_DOMAINE}}                                 → Ecoleparent (Laravel)
-                                                        ├── base Ecoleparent (nouvelle)
+└── {{SOUS_DOMAINE}}                                 → Ecoleparents (Laravel)
+                                                        ├── base Ecoleparents (nouvelle)
                                                         ├── lecture locale Smart School (lecture seule)
                                                         ├── lecture locale Planning (lecture seule)
                                                         └── flux iCal publiés de Planning Évaluations (HTTPS)
@@ -42,7 +42,7 @@ Même procédure que Planning Évaluations (`planning-evaluations/docs/08-deploi
 5. `composer install --no-dev --optimize-autoloader`.
 6. `npm run build` **en local** (pas de Node.js sur le serveur), puis envoi de `public/build/`.
 7. `.env` : `APP_ENV=production`, `APP_DEBUG=false`, `APP_LOCALE=fr` (administration), `APP_TIMEZONE=Africa/Casablanca`, connexions `smartschool` et `planning`.
-8. `php artisan migrate --force` (base Ecoleparent uniquement), `php artisan filament:assets`, `php artisan optimize`.
+8. `php artisan migrate --force` (base Ecoleparents uniquement), `php artisan filament:assets`, `php artisan optimize`.
 9. Tâche Cron hPanel : `/usr/bin/php …/apps/ecoleparents/artisan schedule:run` chaque minute.
 10. Première synchronisation Smart School et Planning ; correspondance des classes (A5).
 11. Comptes Direction et Secrétariat (depuis l'écran A7).

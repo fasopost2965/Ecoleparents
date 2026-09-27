@@ -4,7 +4,7 @@
 
 ## Système de design : « Haute Banque & Grand Livre »
 
-**Décision :** Ecoleparent reprend le **même système** que le portail `livre-des-comptes-la-victoire`, Ecolepay et Planning Évaluations.
+**Décision :** Ecoleparents reprend le **même système** que le portail `livre-des-comptes-la-victoire`, Ecolepay et Planning Évaluations.
 
 - **Référence Stitch :** asset `assets/5d7567ad0c4440c8a9c6671305c6d74e` (projet « Financial Report Dashboard », id `14254095045585116271`).
 - **Référence code :** `planning-evaluations/resources/css/filament/admin/theme.css` (jetons `--pe-*`, vérifiés sur le site en production).
@@ -23,7 +23,7 @@
 
 ## Adaptation à l'espace parents
 
-**Nom affiché aux familles :** l'icône et le titre de l'application (manifeste PWA : `name`, `short_name`) portent **« La Victoire »** et le logo de l'école, jamais « Ecoleparent ». Pour un autre client, ce sera le nom de son école (paramètre).
+**Nom affiché aux familles :** l'icône et le titre de l'application (manifeste PWA : `name`, `short_name`) portent **« La Victoire »** et le logo de l'école, jamais « Ecoleparents ». Pour un autre client, ce sera le nom de son école (paramètre).
 
 L'administration garde le rendu « registre » des autres outils. **L'espace parents est différent** : un public large, sur téléphone, parfois peu à l'aise avec le numérique, souvent en arabe. Le système est gardé (couleurs, polices, angles droits), avec ces ajustements :
 
@@ -61,7 +61,7 @@ Puis, au fil des phases : P3, P4, P5, P7, P8, A1, A3, A4, A5.
 
 ## Continuité avec les autres outils
 
-| Élément | Autres outils | Ecoleparent |
+| Élément | Autres outils | Ecoleparents |
 |---|---|---|
 | Administration | Navigation en haut, contenu centré, cartouches de KPI | Identique |
 | Pages publiques de Planning Évaluations | Blade pur, bilingue FR/AR, sélecteur de langue en en-tête | Même logique, trois langues |
