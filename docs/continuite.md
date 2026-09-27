@@ -2,7 +2,7 @@
 
 > **À donner en premier à toute nouvelle IA ou nouvelle session.** À régénérer à chaque fin de phase.
 
-**Dernière mise à jour :** 2026-09-27 — documentation initiale rédigée (session Claude + Amadou), **en attente de validation**.
+**Dernière mise à jour :** 2026-09-27 — documentation initiale rédigée ; **projet en pause** (décision d'Amadou, 27/09/2026) : rien ne démarre avant qu'il le décide.
 
 ## Où on en est
 
@@ -15,7 +15,7 @@
 | Règles métier | 🟡 R1 à R26, à valider |
 | Plan du MVP | 🟡 Phases 0 à 10, calendrier proposé jusqu'au 1er février 2027 |
 | Design | 🟡 Système repris ; maquettes Stitch à faire (arabe d'abord) |
-| Nom du projet, dépôt, sous-domaine | ✅ **Nom définitif : Ecoleparent** (validé le 27/09/2026, même famille qu'Ecolepay et Ecoledoc). Sur le téléphone des parents, l'application s'appelle **« La Victoire »** (nom et logo de l'école). Dépôt créé sous le nom provisoire `ParentsApp`, **à renommer `ecoleparent` sur GitHub**. Sous-domaine à choisir (`{{SOUS_DOMAINE}}` dans la doc) |
+| Nom du projet, dépôt, sous-domaine | ✅ **Nom définitif : Ecoleparent** (validé le 27/09/2026, même famille qu'Ecolepay et Ecoledoc). Sur le téléphone des parents, l'application s'appelle **« La Victoire »** (nom et logo de l'école). Dépôt renommé `fasopost2965/ecoleparent` le 27/09/2026. Sous-domaine à choisir (`{{SOUS_DOMAINE}}` dans la doc) |
 | Développement | Pas commencé |
 
 ## Décisions prises
@@ -60,7 +60,7 @@
 ## Prochaine action
 
 1. **Amadou relit** la documentation, tranche les ADR 🟡, choisit le **nom définitif** et le sous-domaine.
-2. ✅ Documentation poussée (27/09/2026) ; nom Ecoleparent appliqué partout. **Amadou renomme le dépôt `ParentsApp` → `ecoleparent`** sur GitHub (Settings → Rename ; l'ancienne adresse redirige).
+2. ✅ Documentation poussée (27/09/2026) ; nom Ecoleparent appliqué partout. Dépôt renommé `ecoleparent`.
 3. Requêtes de vérification Smart School, collées dans `01-recherche.md`.
 4. Maquettes Stitch des écrans prioritaires (P2, P1, P6, fiche d'accès, A2), en arabe d'abord.
 5. Phase 0 (installation) — pas avant la validation des points 1 à 4.
